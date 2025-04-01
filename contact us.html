@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('http://media.architecturaldigest.com/photos/56e9c2c66836c03a28818cce/master/pass/Devocion.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .contact-container {
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-container h2 {
+            font-size: 2.8em;
+            color: #d2691e;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 1.1em;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: calc(100% - 22px);
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #007bff;
+        }
+
+        .contact-form button {
+            background-color: #d2691e;
+            color: white;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .contact-form button:hover {
+            background-color: #a0522d;
+            transform: translateY(-3px);
+        }
+
+        .map-container {
+            margin-top: 30px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Plain text added directly to background */
+        body::before {
+            content: "Aroma Cafe ";
+            position: fixed;
+            top: 20px;
+
+            color: white;
+            font-size: 2.4em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            font-family: 'Dancing Script', cursive;
+        }
+
+        body::after {
+            content: "Best Coffee in Town!";
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            font-family: 'Dancing Script', cursive;
+        }
+        .message-after-submit{
+            display:none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p><h3 style="color: white; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);"><b>Email: info@examplecafe.com</b></h3></p>
+            <p><h3 style="color: white; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);"><b>Phone: +1 123 456 7890</b></h3></p>
+            <p><h3 style="color: white; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);"><b>Pune: 123 Cafe Street, Pune, Maharashtra</b></h3></p>
+            <p><h3 style="color: white; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);"><b>Mumbai: 456 Coffee Lane, Mumbai, Maharashtra</b></h3></p>
+            <p><h3 style="color: white; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);"><b>Nashik: 789 Brew Avenue, Nashik, Maharashtra</b></h3></p>
+        </div>
+        <form class="contact-form" id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+            <p><h3 style="color: white; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);"><b>Thank you for contacting us! We believe coffee is a conversation starter, a moment of comfort, and a daily ritual. We'll get back to you shortly.</b></h3></p>
+        </form>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.1645366432657!2d73.85674371489332!3d18.56314818737351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c24946654a9b%3A0x2e8f199b502598c7!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="message-after-submit" id="submitMessage">
+        <p><h3 style="color: white; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);"><b>Thank you for contacting us! We believe coffee is a conversation starter, a moment of comfort, and a daily ritual. We'll get back to you shortly.</b></h3></p>
+    </div>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event){
+            event.preventDefault();
+            document.getElementById('submitMessage').style.display='block';
+        });
+    </script>
+</body>
+</html>

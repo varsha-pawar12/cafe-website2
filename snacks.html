@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snacks Menu</title>
+    <!-- Import fonts for headings and descriptions -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Lora&family=Astoria&family=Freebooter+Script&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header style */
+        header {
+            font-family: 'Astoria', cursive; /* Using Astoria font for the header */
+            background-color: #D2B48C; /* Light brown background color */
+            color: white;
+            text-align: center;
+            padding: 30px;
+            font-size: 3em;
+            text-transform: uppercase;
+        }
+
+        /* Menu container with background image */
+        .menu-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+            background-image: url(https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FmZXxlbnwwfHwwfHx8MA%3D%3D);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            border-radius: 10px;
+        }
+
+        /* Section Titles */
+        h2 {
+            font-family: 'Freebooter Script', cursive; /* Freebooter Script for headings */
+            color: white;
+            font-size: 3em; /* Equal size for both headings */
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #fff;
+            padding-bottom: 10px;
+        }
+
+        /* Dish cards layout */
+        .menu-content {
+            display: flex;
+            gap: 20px;
+            animation: slide-left 30s linear infinite;
+        }
+
+        /* Keyframe for sliding right to left (Snacks) */
+        @keyframes slide-left {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Dish card styles */
+        .dish-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .dish-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Make images wider inside the dish-card */
+        .image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .dish-item {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-transform: capitalize;
+            font-weight: bold;
+        }
+
+        .dish-description {
+            font-family: 'Lora', serif;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 1em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        All time favorites
+    </header>
+
+    <div class="menu-container">
+        <!-- Snacks Section -->
+        <div class="menu-section">
+            <h2>Snacks</h2>
+            <div class="menu-content">
+                <!-- Snacks -->
+                <div class="dish-card">
+                    <img src="https://lh3.googleusercontent.com/VO4wEgYbe5prNOH8AnmIpUSKX7LFvnUUNieNcUrA7l3f35AsAyj5k7jw02ueYn8mvMA_Rm2ibNcX6wqyVck9iL05pDE5klWuLe6_1ty3=w400-rw" class="image" alt="Sandwich">
+                    <div class="dish-item">Sandwich</div>
+                    <div class="dish-description">A classic sandwich filled with your choice of fillings, perfect for a light meal.</div>
+                </div>
+                <div class="dish-card">
+                    <img src="https://imgmediagumlet.lbb.in/media/2025/01/6790b9b0e59da653ef5df1de_1737537968281.jpg" class="image" alt="Burger">
+                    <div class="dish-item">Burger</div>
+                    <div class="dish-description">A juicy burger made with a tender patty and served with fresh toppings.</div>
+                </div>
+                <!-- More Snacks -->
+                <div class="dish-card">
+                    <img src="https://b.zmtcdn.com/data/pictures/3/21121103/00ec62c416f95636e14e29104e5c7a14_o2_featured_v2.jpg" class="image" alt="Pizza">
+                    <div class="dish-item">Pizza</div>
+                    <div class="dish-description">A delicious pizza topped with your favorite ingredients.</div>
+                </div>
+                <!-- More Snacks -->
+                <div class="dish-card">
+                    <img src="https://www.madamrecipe.com/wp-content/uploads/2020/10/garlic-bread-recipe-cheesy-garlic-bread-recipe-garlic-cheese-bread-35-1024x7691-1-800x769.jpeg" class="image" alt="Garlic Bread">
+                    <div class="dish-item">Garlic Bread</div>
+                    <div class="dish-description">Toasted bread topped with garlic butter and herbs, perfect for snacking.</div>
+                </div>
+                <div class="dish-card">
+                    <img src="https://www.sonibakers.com/uploaded_files/products/veg-fried-momos.jpg" class="image" alt="Momos">
+                    <div class="dish-item">Momos</div>
+                    <div class="dish-description">Steamed dumplings filled with vegetables or meat, served with a spicy dip.</div>
+                </div>
+                <div class="dish-card">
+                    <img src="https://b.zmtcdn.com/data/pictures/3/21121103/00ec62c416f95636e14e29104e5c7a14_o2_featured_v2.jpg" class="image" alt="Fries">
+                    <div class="dish-item">Fries</div>
+                    <div class="dish-description">Crispy golden fries, perfect for dipping in ketchup or mayo.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 All Time Favorites Cafe
+    </footer>
+</body>
+</html>

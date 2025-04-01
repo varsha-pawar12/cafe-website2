@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desserts Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('https://tse1.mm.bing.net/th?id=OIP.14tLDkKwL3mtM9hGRyt-TQHaEn&pid=Api&P=0&h=180') no-repeat center center/cover;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        h1 {
+            color: white;
+            font-family: cursive;
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin: 20px 0;
+        }
+        .menu-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            padding-bottom: 20px;
+            position: relative;
+        }
+        .menu {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            animation: scrollMenu 12s linear infinite;
+        }
+        @keyframes scrollMenu {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        .item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            flex: 0 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 380px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        .item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .item h3 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+            color: #333;
+        }
+        .price {
+            font-weight: bold;
+            color: #d63384;
+        }
+        p {
+            margin: 5px 0;
+            font-size: 14px;
+            font-family: 'Freehand', cursive;
+        }
+    </style>
+</head>
+<body>
+    <h1>Which dessert are you craving for?</h1>
+    <div class="menu-container">
+        <div class="menu">
+            <div class="item">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.Us5p_afVIgVkMfHVIiO6uwHaIX&pid=Api&P=0&h=180" alt="Cake">
+                <h3>Chocolate Cake</h3>
+                <p>A rich and moist chocolate cake <br> topped with creamy frosting.</p>
+                <p class="price">₹499</p>
+            </div>
+            <div class="item">
+                <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Triple-Berry-No-Bake-Cheesecake_EXPS_TOHcom19_138951_B01_30_6b.jpg?w=1200" alt="Cheesecake">
+                <h3>Cheesecake</h3>
+                <p>Rich, creamy cheesecake <br> with a graham cracker crust.</p>
+                <p class="price">₹399</p>
+            </div>
+            <div class="item">
+                <img src="https://i.pinimg.com/originals/ba/3d/24/ba3d2429579ac0e69fd0308cb83ccfa6.jpg" alt="Brownie">
+                <h3>Brownie</h3>
+                <p>Fudgy chocolate brownies <br> with a crunchy top.</p>
+                <p class="price">₹249</p>
+            </div>
+            <div class="item">
+                <img src="http://erikarecord.com/wp-content/uploads/2015/07/chocolate-chip-cookies.jpg" alt="Cookies">
+                <h3>Cookies</h3>
+                <p>Classic chocolate chip cookies <br> with a chewy center.</p>
+                <p class="price">₹199</p>
+            </div>
+            <div class="item">
+                <img src="https://recipes.timesofindia.com/photo/63799510.cms" alt="Gulab Jamun">
+                <h3>Gulab Jamun</h3>
+                <p>Soft, spongy milk dumplings <br> soaked in sugar syrup.</p>
+                <p class="price">₹149</p>
+            </div>
+            <div class="item">
+                <img src="https://i.ytimg.com/vi/pdFm9Rnz4H8/maxresdefault.jpg" alt="Jalebi">
+                <h3>Jalebi</h3>
+                <p>Crispy, syrupy deep-fried spirals <br> of deliciousness.</p>
+                <p class="price">₹129</p>
+            </div>
+            <div class="item">
+                <img src="https://i2.wp.com/www.rasoimenu.com/wp-content/uploads/2015/07/Dates-Rasmalai-Recipe.jpg?fit=1920%2C1080&ssl=1" alt="Rasmalai">
+                <h3>Rasmalai</h3>
+                <p>Soft paneer balls soaked <br> in saffron-flavored milk.</p>
+                <p class="price">₹179</p>
+            </div>
+            <div class="item">
+                <img src="https://www.thedonutwhole.com/wp-content/uploads/2022/07/Top-16-Best-Donut-Brands-in-the-World.jpg" alt="Donut">
+                <h3>Donut</h3>
+                <p>Fluffy, deep-fried dough <br> coated with sweet glaze.</p>
+                <p class="price">₹99</p>
+            </div>
+            <div class="item">
+                <img src="https://www.thedailymeal.com/img/gallery/the-ultimate-ice-cream-brands-ranked/l-intro-1660338932.jpg" alt="Ice Cream">
+                <h3>Ice Cream</h3>
+                <p>Creamy and delicious ice cream <br> in a variety of flavors.</p>
+                <p class="price">₹150</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+/* Reset and general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://cdn.pixabay.com/photo/2021/12/02/12/53/coffee-6840457_1280.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+/* Main Menu Styling */
+.menu {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background-color: #C58F65; /* Light brown background color for the menu */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.menu-btn {
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Submenu (hidden by default) */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #C58F65; /* Light brown background color for submenu */
+    padding: 10px;
+    border-radius: 8px;
+    width: 150px; /* Adjust the width of the submenu */
+}
+
+/* Apply the Lora font to the submenu items only when displayed */
+.submenu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.submenu ul li {
+    margin-bottom: 8px;
+}
+
+.submenu ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Lora', serif; /* Apply Lora font to sub-menu items */
+    font-size: 1rem;
+    display: block;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.submenu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+}
+
+/* Show submenu when the menu button is clicked */
+.menu-btn:focus + .submenu,
+.submenu:hover {
+    display: block;
+}
+
+/* Content Section */
+.content {
+    position: absolute;
+    top: 20px; /* Position the text near the top */
+    left: 50%;
+    transform: translateX(-50%); /* Center text horizontally */
+    text-align: center;
+}
+
+/* Cafe Name Styling */
+h1 {
+    font-family: 'Times New Roman', serif;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* Tagline Styling */
+.tagline {
+    font-size: 2rem;
+    font-style: italic;
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+}
+
+/* Sections (for future content) */
+.section {
+    display: none; /* Hide sections for now */
+    padding: 20px;
+    background-color: white;
+    color: black;
+    margin-top: 100px; /* Space between content and sections */
+    border-radius: 8px;
+}
+
+#home, #about, #favourites, #beverages, #contact {
+    margin-top: 20px;
+}
+
+/* Show Section when its link is clicked */
+a:focus + .section, .section:target {
+    display: block;
+}
